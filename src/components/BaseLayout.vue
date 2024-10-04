@@ -1,10 +1,10 @@
 <template>
-    <p>Ceci est mon menu et la page de base de ce site</p>
+    <p>Ceci est un site d'un joli arbre</p>
 </template>
 
 <script>
 export default {
-    name : 'mainPage',
+    name : 'BaseLayout',
 }
 </script>
 

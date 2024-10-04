@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <img id = "tree" alt="Tree Logo" src="./assets/LogoApp.webp">
   <div>
     <HomePage/> 
   </div>
@@ -9,7 +9,8 @@
 import HomePage from '@/pages/HomePage.vue';
 
 
-export default {
+export default 
+{
   name: 'App',
   components:
   {
@@ -24,7 +25,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
 }
+#tree
+{
+  height: 200px;
+  width: 200px;
+}
+
 </style>
