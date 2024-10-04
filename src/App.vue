@@ -1,12 +1,15 @@
 <template>
   <img id = "tree" alt="Tree Logo" src="./assets/LogoApp.webp">
-  <div>
-    <HomePage/> 
-  </div>
+  <BaseLayout>
+    <template #main>
+      <HomePage/> 
+    </template>
+  </BaseLayout>
 </template>
 
 <script>
 import HomePage from '@/pages/HomePage.vue';
+import BaseLayout from '@/components/BaseLayout.vue';
 
 
 export default 
@@ -15,6 +18,7 @@ export default
   components:
   {
     HomePage,
+    BaseLayout,
   }
 }
 </script>

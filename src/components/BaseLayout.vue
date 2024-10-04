@@ -1,13 +1,21 @@
-<template>
-    <p>Ceci est un site d'un joli arbre</p>
-</template>
+<script setup>
 
-<script>
-export default {
-    name : 'BaseLayout',
-}
+import baseHeader from '../components/baseHeader.vue';
+import baseFooter from '../components/baseFooter.vue';
 </script>
 
-<style>
+<template>
+  <header>
+    <slot name="header"><baseHeader></baseHeader></slot>
+  </header>
+  <main>
+    <slot name="main"></slot>
+  </main>
+  <footer>
+    <slot name="footer"><baseFooter></baseFooter></slot>
+  </footer>
+</template>
+
+<style scoped>
 
 </style>
