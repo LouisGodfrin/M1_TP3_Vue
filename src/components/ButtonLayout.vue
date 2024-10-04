@@ -9,6 +9,7 @@
       :class="{ bigger: isBigger, max: isMax }" @click="BiggerWeight"> Be bigger
     </button>
 
+    <!--- Buttons for colors-->
     <button class ="button" :style="buttonStyle('primary')" @mouseover="isHovered1 = true" @mouseleave="isHovered1 = false" 
       @focus="isFocused1 = true">
       {{ isHovered1 ? 'Hovered' : isFocused1 ? 'Focused' : 'Default'}}
