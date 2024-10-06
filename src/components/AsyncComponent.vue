@@ -25,6 +25,10 @@
     {
       handleClick() 
       {
+        if (this.isPending) 
+        {
+          return;
+        }
         const originalOnClick = this.$attrs.onClick;
         if (originalOnClick && typeof originalOnClick === 'function') 
         {

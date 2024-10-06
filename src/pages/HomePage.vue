@@ -50,7 +50,7 @@
         isMax: false,
         buttonWidth: 200,
         buttonHeight: 40,
-        //click: 0,
+        click: 1,
       };
     },
     methods: 
@@ -75,14 +75,21 @@
 
         denied() 
         {
+            if (this.isPending) 
+            {
+              return Promise.resolve(); // Ne pas ré-exécuter si déjà en attente
+            }
+            this.isPending = true;
             return new Promise((resolve) => 
             {
             setTimeout(() => 
             {
-                // this.clickCount++;
-                // console.log(this.clickCount);
+                console.log("+1s");
+                this.click++;
+                console.log(this.click);
+                this.isPending = false;
                 resolve();
-            }, 2* 2000);
+            }, this.click * 1000);
             });
         },
     },
